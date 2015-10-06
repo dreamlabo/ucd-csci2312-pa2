@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.3)
-project(ucd_csci2312_pa2)
+project(PA2)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp point.cpp point.h)
-add_executable(ucd_csci2312_pa2 ${SOURCE_FILES})
+set(SOURCE_FILES main.cpp point.cpp point.h cluster.cpp cluster.h)
+add_executable(PA2 ${SOURCE_FILES})

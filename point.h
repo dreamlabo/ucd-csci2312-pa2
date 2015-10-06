@@ -13,51 +13,54 @@ namespace Clustering {
         double *m_Values; // values of the point's dimensions
 
     public:
+
         Point(int); //DONE // Create at least one constructor which takes an int for the dimension
         Point(int, double *); // second constructor which takes an int and an array of doubles.
 
-        // Big three: cpy ctor, overloaded operator=, dtor
-        Point(const Point &);
+        // Big three: copy constuctor, overloaded operator=, destructor
+        //Copy Constructor
+        Point(const Point &); //DONE?  self Assignment using assert?
 
-        Point &operator=(const Point &);
+        Point &operator=(const Point &); //DONE
 
-        ~Point();
+
+        // Destructor
+        ~Point();//DONE
 
         // Accessors & mutators
-        int getDims() const { return m_Dim; }
+        int getDims() const { return m_Dim; } //Declared inline. DONE
 
-        void setValue(int, double);
+        void setValue(int, double); //DONE
 
-        double getValue(int) const;
+        double getValue(int) const; //DONE
 
         // Functions
-        double distanceTo(const Point &) const;
+        double distanceTo(const Point &) const; //DONE
+
+
 
         // Overloaded operators
-
         // Members
-        Point &operator*=(double);
-
-        Point &operator/=(double);
-
+        Point &operator*=(double); //DONE
+        Point &operator/=(double); //DONE
         const Point operator*(double) const; // DONE prevent (p1*2) = p2;
         const Point operator/(double) const; //DONE
 
         double &operator[](int index) { return m_Values[index - 1]; } // TODO out-of-bds?
 
         // Friends
-        friend Point &operator+=(Point &, const Point &);
-        friend Point &operator-=(Point &, const Point &);
-        friend const Point operator+(const Point &, const Point &);
-        friend const Point operator-(const Point &, const Point &);
-        friend bool operator==(const Point &, const Point &);
-        friend bool operator!=(const Point &, const Point &);
-        friend bool operator<(const Point &, const Point &);
-        friend bool operator>(const Point &, const Point &);
-        friend bool operator<=(const Point &, const Point &);
-        friend bool operator>=(const Point &, const Point &);
-        friend std::ostream &operator<<(std::ostream &, const Point &);
-        friend std::istream &operator>>(std::istream &, Point &);
+        friend Point &operator+=(Point &, const Point &); //Done
+        friend Point &operator-=(Point &, const Point &); //DONE
+        friend const Point operator+(const Point &, const Point &); //DONE
+        friend const Point operator-(const Point &, const Point &);//DONE
+        friend bool operator==(const Point &, const Point &); //DONE
+        friend bool operator!=(const Point &, const Point &); //DONE
+        friend bool operator<(const Point &, const Point &); //DONE
+        friend bool operator>(const Point &, const Point &); //Done
+        friend bool operator<=(const Point &, const Point &); //DONE
+        friend bool operator>=(const Point &, const Point &); //Done
+        friend std::ostream &operator<<(std::ostream &, const Point &); //Done
+        friend std::istream &operator>>(std::istream &, Point &); //NOT DONE
     };
 
 }
