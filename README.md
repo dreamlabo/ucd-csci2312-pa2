@@ -1,4 +1,5 @@
 Compiler: G++,  Clion(1.1)
+
 Overview
 PA-2 contains two classes, Point and Cluster.
 
