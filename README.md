@@ -1,10 +1,9 @@
 Compiler: G++,  Clion(1.1)
-
-Overview
 Final commit of UCD CSCI 2321 PA-2
 
-PA-2 contains two classes, Point and Cluster.
+Overview
 
+PA-2 contains two classes, Point and Cluster.
 
 Point Class:
 The point class  can take in arbitrary dimension of doubles.
