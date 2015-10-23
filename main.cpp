@@ -1,3 +1,6 @@
+//PA2
+//Todd Labo
+//
 #include <iostream>
 #include "point.h"
 #include "cluster.h"
