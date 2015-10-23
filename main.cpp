@@ -30,102 +30,36 @@ void test_remove();
 void test_Cluster_Assignment_Operator();
 void test_Cluster_Copy_Constructor();
 
-int main()
-{
+int main() {
     //Point Class Testing
-//    cout << "\nTesting Point class functions...\n\n";
-//    test_CopyConstructor();
-//    test_Assignment_Operator();
-//    test_Overloaded_OS_operator();
-//    test_DistanceTo();
-//    test_Times_Equal();
-//    test_Division_Equal_Operator();
-//    test_Overloaded_Times_Operator();
-//    test_Overloaded_Division_Operator();
-//    test_Overloaded_Add_Equal_Operator();
-//    test_Overloaded_Minus_Equal_Operator();
-//    test_Overloaded_Addition_Operator();
-//    test_Overloaded_Subtraction_Operator();
-//    test_Overloaded_Equal_Operator();
-//    test_Overloaded_Not_Equal_Operator();
-//    test_Overloaded_Less_Than_Operator();
-//    test_Overloaded_Greater_Than_Operator();
-//    test_Overloaded_Less_Than_Equal_Operator();
-//    test_Overloaded_Greater_Than_Equal_Operator();
+    cout << "\nTesting Point class functions...\n\n";
+    test_CopyConstructor();
+    test_Assignment_Operator();
+    test_Overloaded_OS_operator();
+    test_DistanceTo();
+    test_Times_Equal();
+    test_Division_Equal_Operator();
+    test_Overloaded_Times_Operator();
+    test_Overloaded_Division_Operator();
+    test_Overloaded_Add_Equal_Operator();
+    test_Overloaded_Minus_Equal_Operator();
+    test_Overloaded_Addition_Operator();
+    test_Overloaded_Subtraction_Operator();
+    test_Overloaded_Equal_Operator();
+    test_Overloaded_Not_Equal_Operator();
+    test_Overloaded_Less_Than_Operator();
+    test_Overloaded_Greater_Than_Operator();
+    test_Overloaded_Less_Than_Equal_Operator();
+    test_Overloaded_Greater_Than_Equal_Operator();
 
 //Cluster Class Testing
-//    cout << "\n\nNow testing Cluster Class function...\n\n";
-//    test_add();
-//    test_remove();
-    //test_Cluster_Assignment_Operator();
+    cout << "\n\nNow testing Cluster Class function...\n\n";
+    test_add();
+    test_remove();
+    test_Cluster_Assignment_Operator();
     test_Cluster_Copy_Constructor();
 
-//
-//    const int NUM_DIMENSIONS = 3;
-//    double array_p2[] = {1, 2, 3};
-//    double array_p3[] = {3, 4, 5};
-//    double array_p4[] = {6, 7, 8};
-//    double array_p5[] = {9, 10, 11};
-//    PointPtr clusterPoint2 = new Point(NUM_DIMENSIONS, array_p2);
-//    PointPtr clusterPoint3 = new Point(NUM_DIMENSIONS, array_p3);
-//    PointPtr clusterPoint4 = new Point(NUM_DIMENSIONS, array_p4);
-//    PointPtr clusterPoint5 = new Point(NUM_DIMENSIONS, array_p5);
-//    Cluster c1;
-//
-//    cout << "\nTesting Cluster add function...\n";
-//    cout << "Adding point (6,7,8)...\n";
-//    c1.add(clusterPoint4);
-//    cout << "Adding point (3,4,5)...\n";
-//    c1.add(clusterPoint3);
-//    cout << "Adding point (1,2,3)...\n";
-//    c1.add(clusterPoint2);
-//
-//    cout << "Three points have been added to cluster [c1] and arranged in order (lowest to highest):\n";
-//    cout << "Cluster [c1]: " << c1 << endl << endl;
-//
-////Testing overloaded operator=
-// Cluster c2;
-//    c2 = c1;
-////    //cout << "\nCluster size of [c2] is " << c2.getSize() << endl;
-//    cout << "Cluster [c1]: " << c1 << endl;
-//    c1.add(clusterPoint2);
-//    cout << "Cluster [c1]: " << c1 << endl;
-//    cout << "\nCluster size of [c2] is " << c2.getSize() << endl; //cleary there is something there as it prints 3
-//    cout << "Cluster [c2]: " <<  c2 << endl; //  it does call overloaded << but it prints nothing
-//c2.remove(clusterPoint3);
-//    cout << c2 << endl;
-//    cout << c1 << endl;
-//    c2.add(clusterPoint3);
-//    cout << c2 << endl;
-//    c2 = c1;
-//    //cout << c2 << endl;
-
-//Cluster c3;
-//    cout << "\nTesting Cluster add function...\n";
-//    cout << "Adding point (1,2,3)...\n";
-//    c3.add(clusterPoint4);
-//    cout << "Adding point (3,4,5)...\n";
-//    c3.add(clusterPoint3);
-//    cout << "Adding point (9,10,11)...\n";
-//    c3.add(clusterPoint2);
-//
-//    cout << "Three points have been added to cluster [c3] and arranged in order (lowest to highest):\n";
-//    cout << "Cluster [c3]: " << c3 << endl << endl;
-//
-//
-//    if (c1 == c3)  //should be equal
-//    {cout << "Clusters  are equal.\n";}
-//    else
-//        cout << "Clusters are NOT equal.\n";
-//
-//
-//    c1 = c1;
-
-
-
-
     return 0;
-
 
 }
 
