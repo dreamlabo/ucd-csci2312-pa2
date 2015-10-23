@@ -27,36 +27,106 @@ void test_Overloaded_Greater_Than_Equal_Operator();
 //Function Prototypes (Cluster Class)
 void test_add();
 void test_remove();
+void test_Cluster_Assignment_Operator();
+void test_Cluster_Copy_Constructor();
 
 int main()
 {
     //Point Class Testing
-    cout << "\nTesting Point class functions...\n\n";
-    test_CopyConstructor();
-    test_Assignment_Operator();
-    test_Overloaded_OS_operator();
-    test_DistanceTo();
-    test_Times_Equal();
-    test_Division_Equal_Operator();
-    test_Overloaded_Times_Operator();
-    test_Overloaded_Division_Operator();
-    test_Overloaded_Add_Equal_Operator();
-    test_Overloaded_Minus_Equal_Operator();
-    test_Overloaded_Addition_Operator();
-    test_Overloaded_Subtraction_Operator();
-    test_Overloaded_Equal_Operator();
-    test_Overloaded_Not_Equal_Operator();
-    test_Overloaded_Less_Than_Operator();
-    test_Overloaded_Greater_Than_Operator();
-    test_Overloaded_Less_Than_Equal_Operator();
-    test_Overloaded_Greater_Than_Equal_Operator();
+//    cout << "\nTesting Point class functions...\n\n";
+//    test_CopyConstructor();
+//    test_Assignment_Operator();
+//    test_Overloaded_OS_operator();
+//    test_DistanceTo();
+//    test_Times_Equal();
+//    test_Division_Equal_Operator();
+//    test_Overloaded_Times_Operator();
+//    test_Overloaded_Division_Operator();
+//    test_Overloaded_Add_Equal_Operator();
+//    test_Overloaded_Minus_Equal_Operator();
+//    test_Overloaded_Addition_Operator();
+//    test_Overloaded_Subtraction_Operator();
+//    test_Overloaded_Equal_Operator();
+//    test_Overloaded_Not_Equal_Operator();
+//    test_Overloaded_Less_Than_Operator();
+//    test_Overloaded_Greater_Than_Operator();
+//    test_Overloaded_Less_Than_Equal_Operator();
+//    test_Overloaded_Greater_Than_Equal_Operator();
 
 //Cluster Class Testing
-    cout << "\n\nNow testing Cluster Class function...\n\n";
-    test_add();
-    test_remove();
+//    cout << "\n\nNow testing Cluster Class function...\n\n";
+//    test_add();
+//    test_remove();
+    //test_Cluster_Assignment_Operator();
+    test_Cluster_Copy_Constructor();
 
-  return 0;
+//
+//    const int NUM_DIMENSIONS = 3;
+//    double array_p2[] = {1, 2, 3};
+//    double array_p3[] = {3, 4, 5};
+//    double array_p4[] = {6, 7, 8};
+//    double array_p5[] = {9, 10, 11};
+//    PointPtr clusterPoint2 = new Point(NUM_DIMENSIONS, array_p2);
+//    PointPtr clusterPoint3 = new Point(NUM_DIMENSIONS, array_p3);
+//    PointPtr clusterPoint4 = new Point(NUM_DIMENSIONS, array_p4);
+//    PointPtr clusterPoint5 = new Point(NUM_DIMENSIONS, array_p5);
+//    Cluster c1;
+//
+//    cout << "\nTesting Cluster add function...\n";
+//    cout << "Adding point (6,7,8)...\n";
+//    c1.add(clusterPoint4);
+//    cout << "Adding point (3,4,5)...\n";
+//    c1.add(clusterPoint3);
+//    cout << "Adding point (1,2,3)...\n";
+//    c1.add(clusterPoint2);
+//
+//    cout << "Three points have been added to cluster [c1] and arranged in order (lowest to highest):\n";
+//    cout << "Cluster [c1]: " << c1 << endl << endl;
+//
+////Testing overloaded operator=
+// Cluster c2;
+//    c2 = c1;
+////    //cout << "\nCluster size of [c2] is " << c2.getSize() << endl;
+//    cout << "Cluster [c1]: " << c1 << endl;
+//    c1.add(clusterPoint2);
+//    cout << "Cluster [c1]: " << c1 << endl;
+//    cout << "\nCluster size of [c2] is " << c2.getSize() << endl; //cleary there is something there as it prints 3
+//    cout << "Cluster [c2]: " <<  c2 << endl; //  it does call overloaded << but it prints nothing
+//c2.remove(clusterPoint3);
+//    cout << c2 << endl;
+//    cout << c1 << endl;
+//    c2.add(clusterPoint3);
+//    cout << c2 << endl;
+//    c2 = c1;
+//    //cout << c2 << endl;
+
+//Cluster c3;
+//    cout << "\nTesting Cluster add function...\n";
+//    cout << "Adding point (1,2,3)...\n";
+//    c3.add(clusterPoint4);
+//    cout << "Adding point (3,4,5)...\n";
+//    c3.add(clusterPoint3);
+//    cout << "Adding point (9,10,11)...\n";
+//    c3.add(clusterPoint2);
+//
+//    cout << "Three points have been added to cluster [c3] and arranged in order (lowest to highest):\n";
+//    cout << "Cluster [c3]: " << c3 << endl << endl;
+//
+//
+//    if (c1 == c3)  //should be equal
+//    {cout << "Clusters  are equal.\n";}
+//    else
+//        cout << "Clusters are NOT equal.\n";
+//
+//
+//    c1 = c1;
+
+
+
+
+    return 0;
+
+
 }
 
 
@@ -309,9 +379,9 @@ void test_Overloaded_Less_Than_Equal_Operator(){
 
     cout << "\nTesting overloaded <= ...\n";
     if (p12<= p3)
-         { cout << "[p3]: " << p3 << " is less than or equal to [p12]: " << p12 << endl;}
-     else
-          {cout << "Unfortunatly, [p12]: " << p12 << " is NOT less than or equal to [p3]: " << p3 << endl;}
+    { cout << "[p3]: " << p3 << " is less than or equal to [p12]: " << p12 << endl;}
+    else
+    {cout << "Unfortunatly, [p12]: " << p12 << " is NOT less than or equal to [p3]: " << p3 << endl;}
 }
 
 //Test Overloaded >=
@@ -326,7 +396,7 @@ void test_Overloaded_Greater_Than_Equal_Operator() {
     if (p12 >= p3)
     {   cout << "[p12]: " << p12 << " is greater than or equal to [p3]: " << p3 << endl; }
     else
-       {cout << "Unfortunatly, [p12]: " << p12 << " is NOT greater than or equal to [p3]: " << p3 << endl; }
+    {cout << "Unfortunatly, [p12]: " << p12 << " is NOT greater than or equal to [p3]: " << p3 << endl; }
 }
 
 //Function Definitions
@@ -356,7 +426,7 @@ void test_add(){
 }
 
 // test remove function
-void test_remove(){
+void test_remove() {
     const int NUM_DIMENSIONS = 3;
     double array_p2[] = {1, 2, 3};
     double array_p3[] = {3, 4, 5};
@@ -375,4 +445,88 @@ void test_remove(){
     cout << "Now removing point (1,2,3)...\n";
     c1.remove(clusterPoint2);
     cout << "Cluster [c1] now contains " << c1 << endl;
+}
+
+void test_Cluster_Assignment_Operator()
+{
+    const int NUM_DIMENSIONS = 3;
+    double array_p2[] = {1, 2, 3};
+    double array_p3[] = {3, 4, 5};
+    double array_p4[] = {6, 7, 8};
+    double array_p5[] = {9, 10, 11};
+    PointPtr clusterPoint2 = new Point(NUM_DIMENSIONS, array_p2);
+    PointPtr clusterPoint3 = new Point(NUM_DIMENSIONS, array_p3);
+    PointPtr clusterPoint4 = new Point(NUM_DIMENSIONS, array_p4);
+    PointPtr clusterPoint5 = new Point(NUM_DIMENSIONS, array_p5);
+    Cluster c1;
+    cout << "\nTesting Cluster add function...\n";
+    cout << "Adding point (6,7,8)...\n";
+    c1.add(clusterPoint4);
+    cout << "Adding point (3,4,5)...\n";
+    c1.add(clusterPoint3);
+    cout << "Adding point (1,2,3)...\n";
+    c1.add(clusterPoint2);
+
+    cout << "Three points have been added to cluster [c1] and arranged in order (lowest to highest):\n";
+    cout << "Cluster [c1]: " << c1 << endl << endl;
+
+//Testing overloaded operator=
+    cout << "\nTesting Overloaded Operator= ...\n";
+    Cluster c2;
+    c2 = c1;
+    cout << "Assigning [c1] " << c1 << " to [c2]\n";
+    cout << "c[2] now is assigned the points " << c2 << endl;
+    cout << "\nCluster size of [c2] is " << c2.getSize() << endl;
+
+    cout << "Adding a point to c[1]...\n";
+    c1.add(clusterPoint2);
+    cout << "Cluster [c1] is now: " << c1 << endl;
+    cout << "But c[2] remains " << c2 << endl;
+    cout << "Removing a point to c[2]...\n";
+    c2.remove(clusterPoint3);
+    cout << "c[2] is now " << c2 << endl;
+    cout << "But c[1] remains " << c1 << endl;
+    cout << "Adding a point to c[2]...\n";
+    c2.add(clusterPoint3);
+    cout << "c[2] is now " << c2 << endl;
+    cout << "But c[1] remains " << c1 << endl;
+
+    cout << "Checking reassignment...\n";
+    c2 = c1;
+    cout << "c[2] is now " << c2 << endl;
+    cout << "And c[1] remains " << c1 << endl;
+
+    Cluster c3(c1);
+    cout << "c[3] is now " << c3 << endl;
+}
+
+//Testing Cluster Copy Constructor
+void test_Cluster_Copy_Constructor()
+{
+    const int NUM_DIMENSIONS = 3;
+    double array_p2[] = {21, 22, 23};
+    double array_p3[] = {24, 25, 26};
+    double array_p4[] = {27, 28, 29};
+    double array_p5[] = {30, 31, 32};
+    PointPtr clusterPoint2 = new Point(NUM_DIMENSIONS, array_p2);
+    PointPtr clusterPoint3 = new Point(NUM_DIMENSIONS, array_p3);
+    PointPtr clusterPoint4 = new Point(NUM_DIMENSIONS, array_p4);
+    PointPtr clusterPoint5 = new Point(NUM_DIMENSIONS, array_p5);
+    Cluster c1;
+    c1.add(clusterPoint4);
+    c1.add(clusterPoint3);
+    c1.add(clusterPoint2);
+
+    cout << "Three points have been added to cluster [c1] and arranged in order (lowest to highest):\n";
+    cout << "Cluster [c1]: " << c1 << endl << endl;
+
+    Cluster c3(c1);
+    cout << "c[3] has been constructed with the points from c[1]: " << c3 << endl;
+    c3.remove(clusterPoint2);
+    cout << "\nNow removing point (21, 22, 23) from c[3]...\n";
+    cout << "c[3] is now " << c3 << endl;
+    cout << "And c[1] remains " << c1 << endl;
+    cout << "Now combining c[3] and c[2]  (c[3] += c[1]...\n";
+   c3 += c1;
+    cout << "c[3] is now " << c3 << endl;
 }

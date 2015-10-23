@@ -10,32 +10,32 @@ namespace Clustering {
 //Constructor #1
 //Precondition: User has entered amount of dimensions for their points
 //PostCondition: *values is initialized to 0
-     Point::Point(int dimensions)
+    Point::Point(int dimensions)
     {
-         m_Dim = dimensions;
-         m_Values = new double[m_Dim];
+        m_Dim = dimensions;
+        m_Values = new double[m_Dim];
 
-         //Initialize m_Value array to 0.0
-         for (int index = 0; index < m_Dim; index++)
-         {
-             m_Values[index] = 0.0;
-         }
+        //Initialize m_Value array to 0.0
+        for (int index = 0; index < m_Dim; index++)
+        {
+            m_Values[index] = 0.0;
+        }
 
-     }
+    }
 
 //Constructor #2
 //Precondition: User has entered amount of dimensions for their points and actual point values
 //PostCondition: points are entered into the class
-     Point::Point(int dimensions, double *arrayOfPoints)
+    Point::Point(int dimensions, double *arrayOfPoints)
     {
-         m_Dim = dimensions;
-         m_Values = new double[m_Dim];
+        m_Dim = dimensions;
+        m_Values = new double[m_Dim];
 
-         for (int index = 0; index < dimensions; index++)
-         {
-             m_Values[index] = arrayOfPoints[index];
-         }
-     }
+        for (int index = 0; index < dimensions; index++)
+        {
+            m_Values[index] = arrayOfPoints[index];
+        }
+    }
 
 //Copy constructor  //Seems to be working
     Point::Point(const Point &rightSide)
@@ -44,7 +44,7 @@ namespace Clustering {
         m_Values = new double[m_Dim];
         for ( int index = 0; index < m_Dim; index++)
         {
-             m_Values[index] = rightSide.m_Values[index];
+            m_Values[index] = rightSide.m_Values[index];
         }
     }
 
@@ -84,12 +84,12 @@ namespace Clustering {
 //Accessors
     double Point::getValue(int numDimensions) const {
         for (int index = 0; index< numDimensions; index++)
-        return m_Values[index];
+            return m_Values[index];
     }
 
 // Calculate the distance from one point to another point.
     double Point::distanceTo(const Point &array) const {
-            if (m_Dim == array.m_Dim) {
+        if (m_Dim == array.m_Dim) {
             double sum;
             double distance;
 
@@ -99,7 +99,7 @@ namespace Clustering {
             return sqrt(sum);
         }
         else
-        std::cout << "Distance of different dimension points can't be measured.\n";
+            std::cout << "Distance of different dimension points can't be measured.\n";
 
 
 
@@ -123,14 +123,14 @@ namespace Clustering {
     }
 
     const Point Point::operator*(double d) const {
-            if( d == 0) {
+        if( d == 0) {
             std::cout << "Sorry, division by 0 is not allowed\n";
             return *this;
         }
         Point temp(this->m_Dim);
         int dim = this->m_Dim;
         for (int index = 0; index < dim; index++){
-           temp.m_Values[index] = this->m_Values[index] * d;
+            temp.m_Values[index] = this->m_Values[index] * d;
         }
         return temp;
     }
@@ -157,13 +157,13 @@ namespace Clustering {
         { std::cout << "Sorry, cant add points of different dimension\n";}
 
         for (int index = 0; index < leftSide.m_Dim; index++){
-           leftSide.m_Values[index] += rightSide.m_Values[index];
+            leftSide.m_Values[index] += rightSide.m_Values[index];
         }
         return leftSide;
     }
 
     //Overloaded +-
-   Point &operator-=(Point &leftSide, const Point &rightSide)
+    Point &operator-=(Point &leftSide, const Point &rightSide)
     {
         if(leftSide.m_Dim != rightSide.m_Dim)
         { std::cout << "Sorry, cant add points of different dimension\n";}
@@ -179,7 +179,7 @@ namespace Clustering {
     const Point operator+(const Point &leftSide, const Point &rightSide)
     { if (leftSide.m_Dim != rightSide.m_Dim)
         { std::cout << "Can't add points of different dimensions\n";
-        return leftSide;
+            return leftSide;
         }
 
         Point temp(leftSide.m_Dim);
@@ -223,24 +223,24 @@ namespace Clustering {
 
     //Overloaded !=
     //Seems to be working
-     bool operator!=(const Point &leftSide, const Point &rightSide)
-     {
-         if ( leftSide.m_Dim != rightSide.m_Dim)
-             { std::cout << "Can't compare points of different dimensions\n";}
-          else
-         {
-             int dim = leftSide.m_Dim;
-             for (int index = 0; index < dim; index++)
-                 if (leftSide.m_Values[index] != rightSide.m_Values[index])
-                     return true;
-         }
-         return false;
-     }
+    bool operator!=(const Point &leftSide, const Point &rightSide)
+    {
+        if ( leftSide.m_Dim != rightSide.m_Dim)
+        { std::cout << "Can't compare points of different dimensions\n";}
+        else
+        {
+            int dim = leftSide.m_Dim;
+            for (int index = 0; index < dim; index++)
+                if (leftSide.m_Values[index] != rightSide.m_Values[index])
+                    return true;
+        }
+        return false;
+    }
 
     //Overloaded <
     //Seems to be working
-     bool operator<(const Point &leftSide, const Point &rightSide)
-     {
+    bool operator<(const Point &leftSide, const Point &rightSide)
+    {
         int dim = leftSide.m_Dim;
         for (int index = 0; index < dim; index++) {
             if (leftSide.m_Values[index] < rightSide.m_Values[index])
@@ -262,19 +262,19 @@ namespace Clustering {
 
     //Overloaded <=
     //Seems to be working
-   bool operator<=(const Point &leftSide, const Point &rightSide)
-   {
-    int dim = leftSide.m_Dim;
-    for (int index = 0; index < dim; index++) {
-    if (leftSide.m_Values[index] <= rightSide.m_Values[index])
-    return true;
-   }
-    return false;
+    bool operator<=(const Point &leftSide, const Point &rightSide)
+    {
+        int dim = leftSide.m_Dim;
+        for (int index = 0; index < dim; index++) {
+            if (leftSide.m_Values[index] <= rightSide.m_Values[index])
+                return true;
+        }
+        return false;
     }
 
     //Overloaded >=
     //Seems to be working
-     bool operator>=(const Point &leftSide, const Point &rightSide) {
+    bool operator>=(const Point &leftSide, const Point &rightSide) {
         int dim = leftSide.m_Dim;
         for (int index = 0; index < dim; index++) {
             if (leftSide.m_Values[index] >= rightSide.m_Values[index])
@@ -297,7 +297,7 @@ namespace Clustering {
     }
 
     //Overloaded >>
- std::istream &operator>>(std::istream &is, Clustering::Point &point) {
+    std::istream &operator>>(std::istream &is, Clustering::Point &point) {
         int numberOfDimensions;
         double arrayOfPoints;
         std::cout << "How many dimensions are in your point? ";
@@ -311,4 +311,3 @@ namespace Clustering {
 
 
 }
-
